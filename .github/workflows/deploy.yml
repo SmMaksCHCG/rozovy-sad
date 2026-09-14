@@ -25,7 +25,7 @@ jobs:
           node-version: 22
           cache: npm
       - run: node scripts/ensure-images.mjs
-      - run: npm ci
+      - run: npm install
       - run: npm run build
         env:
           GITHUB_PAGES: "true"

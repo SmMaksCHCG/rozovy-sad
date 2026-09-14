@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# whole-file encodings (CI uses split parts)
+encoded/*.b64
