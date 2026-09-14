@@ -1,17 +1,16 @@
 "use client";
 
-import Image from "next/image";
 import { BED, totalPlants } from "@/lib/plants";
+import { asset } from "@/lib/asset";
 
 export function Hero() {
   return (
     <section className="relative overflow-hidden rounded-3xl bg-[#2a241c] text-[#f4efe4]">
-      <Image
-        src="/flower-bed-hero.jpg"
+      <img
+        src={asset("/flower-bed-hero.jpg")}
         alt="Миксбордер Розовый сад в пике июльского цветения: пионы, лилии, флоксы, лаванда и гладиолусы"
         width={1600}
         height={900}
-        priority
         className="h-[min(72vh,640px)] w-full object-cover object-center opacity-90"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-[#2a241c] via-[#2a241c]/35 to-transparent" />

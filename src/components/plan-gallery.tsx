@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { asset } from "@/lib/asset";
 
 export function PlanGallery() {
   return (
@@ -17,8 +17,8 @@ export function PlanGallery() {
         </p>
       </div>
       <figure className="overflow-hidden rounded-3xl ring-1 ring-foreground/10">
-        <Image
-          src="/flower-bed-plan.jpg"
+        <img
+          src={asset("/flower-bed-plan.jpg")}
           alt="Вид сверху: акварельный план посадки миксбордера Розовый сад"
           width={1600}
           height={900}

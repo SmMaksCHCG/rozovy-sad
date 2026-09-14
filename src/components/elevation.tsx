@@ -26,17 +26,19 @@ export function Elevation() {
           {sorted.map((plant) => (
             <div
               key={plant.id}
-              className="flex min-w-0 flex-1 flex-col items-center gap-2"
+              className="flex h-full min-w-0 flex-1 flex-col items-center"
             >
-              <div
-                className="w-full max-w-16 rounded-t-full"
-                style={{
-                  height: `${(plant.height / MAX_H) * 100}%`,
-                  background: `linear-gradient(180deg, ${plant.fillInner}, ${plant.fill})`,
-                }}
-                title={`${plant.name}: ${plant.height} см`}
-              />
-              <p className="w-full truncate text-center text-[10px] sm:text-xs">
+              <div className="flex min-h-0 w-full flex-1 items-end justify-center">
+                <div
+                  className="w-full max-w-16 rounded-t-full"
+                  style={{
+                    height: `${(plant.height / MAX_H) * 100}%`,
+                    background: `linear-gradient(180deg, ${plant.fillInner}, ${plant.fill})`,
+                  }}
+                  title={`${plant.name}: ${plant.height} см`}
+                />
+              </div>
+              <p className="mt-2 w-full truncate text-center text-[10px] sm:text-xs">
                 {plant.name}
               </p>
               <p className="text-[10px] text-muted-foreground">{plant.height}</p>
